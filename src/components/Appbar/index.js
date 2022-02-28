@@ -10,7 +10,9 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import Typography from "@mui/material/Typography";
-
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Paper from "@mui/material/Paper";
 
 import Logo from "assets/images/logo.svg";
 
@@ -47,13 +49,37 @@ export default function Appbar(props) {
 	return (
 		<>
 			<AppBar
-				enableColorOnDark
 				sx={{
 					background: `linear-gradient(180deg, #1B9AAA 36.26%, #050505 100%)`,
 				}}
 			>
 				<Toolbar>
-					<img src={Logo} alt="Null Logo"/>
+					<Container>
+						<Grid container direction="row" justifyContent="space-between">
+							<Grid item>
+								<img src={Logo} alt="Null Logo" />
+							</Grid>
+							<Grid item container alignItems="center" sx={{ maxWidth: "50%" }}>
+								<Tabs
+									aria-label="nav tabs example"
+									value={0}
+									textColor="secondary"
+									indicatorColor="secondary"
+								>
+									{routes.map((route, index) => (
+										<Tab
+											component="a"
+											sx={{ selected: { color: "#fff" } }}
+											key={`navTab-${route.name}-${index}`}
+											label={route.name}
+											
+											href={route.section}
+										/>
+									))}
+								</Tabs>
+							</Grid>
+						</Grid>
+					</Container>
 				</Toolbar>
 			</AppBar>
 			<SwipeableDrawer
