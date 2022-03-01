@@ -32,7 +32,7 @@ export default function Hero() {
 	}, [vantaEffect]);
 
 	return (
-		<Grid container sx={{ minHeight: "40vw", mb:"6rem" }} alignItems="center" ref={myRef}>
+		<Grid id="home" container sx={{ minHeight: "40vw", mb:"6rem" }} alignItems="center" ref={myRef}>
 			<Grid item container direction="column" alignItems="center" md>
 				<Paper
 					elevation={6}

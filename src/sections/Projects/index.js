@@ -15,7 +15,7 @@ export default function Projects() {
 			alignItems="center"
 			spacing={4}
 		>
-			<Grid item sx={{ mb: "4rem" }}>
+			<Grid id="projects" item sx={{ mb: "4rem" }}>
 				<SectionTitle title="Projects" />
 			</Grid>
 

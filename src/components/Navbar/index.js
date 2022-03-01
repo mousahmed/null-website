@@ -1,7 +1,9 @@
-import { cloneElement, useState } from "react";
+import { cloneElement, useState, useEffect } from "react";
 
 import PropTypes from "prop-types";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
+
+import { scroller, Link } from "react-scroll";
 
 // @mui material components
 import Container from "@mui/material/Container";
@@ -17,11 +19,11 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Logo from "assets/images/logo.svg";
 
 const routes = [
-	{ name: "Home", section: "/#home" },
-	{ name: "Projects", section: "/#projects" },
-	{ name: "Services", section: "/#services" },
-	{ name: "About Us", section: "/#about" },
-	{ name: "Contact Us", section: "/#contact" },
+	{ name: "Home", section: "home" },
+	{ name: "Projects", section: "projects" },
+	{ name: "Services", section: "services" },
+	{ name: "About Us", section: "about" },
+	{ name: "Contact Us", section: "contact" },
 ];
 function ElevationScroll(props) {
 	const { children } = props;
@@ -50,6 +52,30 @@ export default function Navbar() {
 	const handleChange = (event, newValue) => {
 		setActiveTab(newValue);
 	};
+	const scrollTo = (route) => {
+		scroller.scrollTo(route, {
+			duration: 800,
+			delay: 0,
+			smooth: true,
+			offset: -100,
+		});
+	};
+
+
+	useEffect(() => {
+		const projects = document.getElementById("home").clientHeight  - 100;
+		window.addEventListener("scroll", () => {
+			
+			if (
+				document.body.scrollTop > projects  ||
+				document.documentElement.scrollTop > projects 
+			) {
+				setActiveTab(1);
+			}else{
+				setActiveTab(0);
+			}
+		});
+	}, []);
 
 	return (
 		<>
@@ -63,9 +89,9 @@ export default function Navbar() {
 					<Container>
 						<Grid container direction="row" justifyContent="space-between">
 							<Grid item xs={2}>
-								<a href="/#">
+								<Link to="home" smooth offset={-100}>
 									<img src={Logo} alt="Null Logo" />
-								</a>
+								</Link>
 							</Grid>
 							<Grid
 								item
@@ -85,10 +111,10 @@ export default function Navbar() {
 									{routes.map((route, index) => (
 										<Tab
 											component="a"
+											onClick={() => scrollTo(route.section)}
 											sx={{ selected: { color: "#fff" } }}
 											key={`navTab-${route.name}-${index}`}
 											label={route.name}
-											href={route.section}
 										/>
 									))}
 								</Tabs>
@@ -108,7 +134,7 @@ export default function Navbar() {
 					</Container>
 				</Toolbar>
 			</AppBar>
-			<Toolbar sx={{mb: "3rem"}} />
+			<Toolbar sx={{ mb: "3rem" }} />
 			<SwipeableDrawer
 				disableBackdropTransition={!iOS}
 				disableDiscovery={iOS}
