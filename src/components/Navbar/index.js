@@ -134,7 +134,7 @@ export default function Navbar() {
 					</Container>
 				</Toolbar>
 			</AppBar>
-			<Toolbar sx={{ mb: "3rem" }} />
+			<Toolbar sx={{ mb: "1rem" }} />
 			<SwipeableDrawer
 				disableBackdropTransition={!iOS}
 				disableDiscovery={iOS}

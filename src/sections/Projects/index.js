@@ -10,7 +10,7 @@ export default function Projects() {
 		<Grid
 			container
 			direction="column"
-			sx={{ mb: "8rem" }}
+			sx={{ mb: "15rem" }}
 			align="center"
 			alignItems="center"
 			spacing={4}
