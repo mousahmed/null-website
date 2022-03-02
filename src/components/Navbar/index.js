@@ -15,6 +15,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import Icon from "@mui/material/Icon";
 
 import Logo from "assets/images/logo.svg";
 
@@ -61,17 +62,31 @@ export default function Navbar() {
 		});
 	};
 
-
 	useEffect(() => {
-		const projects = document.getElementById("home").clientHeight  - 100;
+		const projectsPosition = document.getElementById("home").scrollHeight - 100;
+		const servicesPosition =
+			projectsPosition + document.getElementById("projects").scrollHeight;
+
+		const AboutPosition =
+			servicesPosition + document.getElementById("services").scrollHeight + 200;
+
 		window.addEventListener("scroll", () => {
-			
 			if (
-				document.body.scrollTop > projects  ||
-				document.documentElement.scrollTop > projects 
+				document.body.scrollTop > AboutPosition ||
+				document.documentElement.scrollTop > AboutPosition
+			) {
+				setActiveTab(3);
+			} else if (
+				document.body.scrollTop > servicesPosition ||
+				document.documentElement.scrollTop > servicesPosition
+			) {
+				setActiveTab(2);
+			} else if (
+				document.body.scrollTop > projectsPosition ||
+				document.documentElement.scrollTop > projectsPosition
 			) {
 				setActiveTab(1);
-			}else{
+			} else {
 				setActiveTab(0);
 			}
 		});
@@ -87,8 +102,13 @@ export default function Navbar() {
 			>
 				<Toolbar>
 					<Container>
-						<Grid container direction="row" justifyContent="space-between">
-							<Grid item xs={2}>
+						<Grid
+							container
+							direction="row"
+							justifyContent="space-between"
+							alignItems="center"
+						>
+							<Grid item xs={3}>
 								<Link to="home" smooth offset={-100}>
 									<img src={Logo} alt="Null Logo" />
 								</Link>

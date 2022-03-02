@@ -8,14 +8,15 @@ import ProjectCard from "components/ProjectCard";
 export default function Projects() {
 	return (
 		<Grid
+			id="projects"
 			container
 			direction="column"
-			sx={{ mb: "15rem" }}
+			sx={{ mb: "20rem" }}
 			align="center"
 			alignItems="center"
 			spacing={4}
 		>
-			<Grid id="projects" item sx={{ mb: "4rem" }}>
+			<Grid item sx={{ mb: "4rem" }}>
 				<SectionTitle title="Projects" />
 			</Grid>
 

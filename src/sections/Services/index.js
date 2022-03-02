@@ -16,14 +16,15 @@ import { AnimationOnScroll } from "react-animation-on-scroll";
 export default function Services() {
 	return (
 		<Grid
+			id="services"
 			container
 			direction="column"
-			sx={{ mb: "15rem" }}
+			sx={{ mb: "20rem" }}
 			align="center"
 			alignItems="center"
 			spacing={4}
 		>
-			<Grid id="services" item sx={{ mb: "4rem" }}>
+			<Grid item sx={{ mb: "4rem" }}>
 				<SectionTitle title="Services" />
 			</Grid>
 
@@ -37,7 +38,7 @@ export default function Services() {
 					sm={12}
 					md={3}
 				>
-					<AnimationOnScroll animateIn="animate__fadeInLeft" delay={1000}>
+					<AnimationOnScroll animateIn="animate__fadeInLeft" delay={700}>
 						<DesignIcon sx={{ fontSize: "4rem" }} color="primary" />
 						<Typography variant="h5" color="secondary" gutterBottom>
 							UI / UX Design
@@ -57,7 +58,7 @@ export default function Services() {
 					sm={12}
 					md={3}
 				>
-					<AnimationOnScroll animateIn="animate__fadeInUp" delay={1000}>
+					<AnimationOnScroll animateIn="animate__fadeInUp" delay={700}>
 						<Icon sx={{ fontSize: "4rem" }}>
 							<img
 								src={FrontIcon}
@@ -84,7 +85,7 @@ export default function Services() {
 					sm={12}
 					md={3}
 				>
-					<AnimationOnScroll animateIn="animate__fadeInUp" delay={1000}>
+					<AnimationOnScroll animateIn="animate__fadeInUp" delay={700}>
 						<Icon sx={{ fontSize: "4rem" }}>
 							<img
 								style={{ maxWidth: "100%", maxHeight: "100%" }}
@@ -110,7 +111,7 @@ export default function Services() {
 					sm={12}
 					md={3}
 				>
-					<AnimationOnScroll animateIn="animate__fadeInRight" delay={1000}>
+					<AnimationOnScroll animateIn="animate__fadeInRight" delay={700}>
 						<Icon sx={{ fontSize: "4rem" }}>
 							<img
 								style={{ maxWidth: "100%", maxHeight: "100%" }}

@@ -49,7 +49,7 @@ export default function Hero() {
 					<Typography variant="h4" color="secondary" gutterBottom>
 						Bring out the best in you
 					</Typography>
-					<Typography variant="body1" paragraph sx={{ maxWidth: "42rem" }}>
+					<Typography variant="body1" color="#ADA8B6" paragraph sx={{ maxWidth: "42rem" }}>
 						Let’s work together in developing your next idea. Bringing it to
 						life and becomes scalable & resiliant on the cloud. Acessible to you
 						and everyone you want in any place, at any time.
