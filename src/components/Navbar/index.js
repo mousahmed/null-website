@@ -63,15 +63,24 @@ export default function Navbar() {
 	};
 
 	useEffect(() => {
-		const projectsPosition = document.getElementById("home").scrollHeight - 100;
+		const projectsPosition = document.getElementById("home").clientHeight - 100;
+
 		const servicesPosition =
-			projectsPosition + document.getElementById("projects").scrollHeight;
+			projectsPosition + document.getElementById("projects").clientHeight;
 
 		const AboutPosition =
-			servicesPosition + document.getElementById("services").scrollHeight + 200;
+			servicesPosition + document.getElementById("services").clientHeight + 200;
+
+		const ContactPosition =
+			AboutPosition + document.getElementById("about").clientHeight + 200;
 
 		window.addEventListener("scroll", () => {
 			if (
+				document.body.scrollTop > ContactPosition ||
+				document.documentElement.scrollTop > ContactPosition
+			) {
+				setActiveTab(4);
+			} else if (
 				document.body.scrollTop > AboutPosition ||
 				document.documentElement.scrollTop > AboutPosition
 			) {

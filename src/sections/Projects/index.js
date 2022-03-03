@@ -1,6 +1,5 @@
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import Paper from "@mui/material/Paper";
 
 import SectionTitle from "components/SectionTitle";
 import ProjectCard from "components/ProjectCard";
@@ -38,7 +37,7 @@ export default function Projects() {
 						<ProjectCard title="APIs" />
 					</Grid>
 					<Grid item>
-						<ProjectCard title="Iac" />
+						<ProjectCard title="IaC" />
 					</Grid>
 				</Grid>
 			</Grid>

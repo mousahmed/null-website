@@ -4,6 +4,8 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
 
+import Logo from "assets/images/logo.png";
+
 export default function Hero() {
 	const [vantaEffect, setVantaEffect] = useState(0);
 	const myRef = useRef(null);
@@ -32,7 +34,13 @@ export default function Hero() {
 	}, [vantaEffect]);
 
 	return (
-		<Grid id="home" container sx={{ minHeight: "40vw", mb:"6rem" }} alignItems="center" ref={myRef}>
+		<Grid
+			id="home"
+			container
+			sx={{ minHeight: "40vw", mb: "6rem" }}
+			alignItems="center"
+			ref={myRef}
+		>
 			<Grid item container direction="column" alignItems="center" md>
 				<Paper
 					elevation={6}
@@ -43,13 +51,25 @@ export default function Hero() {
 					}}
 					align="center"
 				>
+					<img
+						src={Logo}
+						alt="Null Logo"
+						style={{
+							animation: `spin 6s linear infinite`,
+						}}
+					/>
 					<Typography variant="h3" color="primary" gutterBottom>
 						Null Cloud Solutions
 					</Typography>
 					<Typography variant="h4" color="secondary" gutterBottom>
 						Bring out the best in you
 					</Typography>
-					<Typography variant="body1" color="#ADA8B6" paragraph sx={{ maxWidth: "42rem" }}>
+					<Typography
+						variant="body1"
+						color="#ADA8B6"
+						paragraph
+						sx={{ maxWidth: "42rem" }}
+					>
 						Let’s work together in developing your next idea. Bringing it to
 						life and becomes scalable & resiliant on the cloud. Acessible to you
 						and everyone you want in any place, at any time.

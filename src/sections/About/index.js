@@ -1,16 +1,13 @@
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import Paper from "@mui/material/Paper";
-import Icon from "@mui/material/Icon";
 import Button from "@mui/material/Button";
 import DownloadIcon from "@mui/icons-material/Download";
 import SendIcon from "@mui/icons-material/Send";
 import SectionTitle from "components/SectionTitle";
 
-import { AnimationOnScroll } from "react-animation-on-scroll";
 import AboutImage from "assets/images/moustafa_mansour.png";
 
-import CV from "assets/files/cv.pdf"
+import CV from "assets/files/cv.pdf";
 export default function About() {
 	return (
 		<Grid
@@ -26,11 +23,12 @@ export default function About() {
 				<SectionTitle title="About Us" />
 			</Grid>
 
-			<Grid item container justifyContent="space-between" spacing={6}>
-				<Grid item xs={12} md={6}>
-					<img
+			<Grid item container justifyContent="space-between">
+				<Grid item xs={12} lg={6}>
+					<Grid
+						component="img"
 						src={AboutImage}
-						style={{ maxHeight: "45rem" }}
+						sx={{ maxHeight: { xs: "35rem", md: "45rem" } }}
 						alt="Moustafa Mansour"
 					/>
 				</Grid>
@@ -40,7 +38,7 @@ export default function About() {
 					direction="column"
 					justifyContent="space-between"
 					xs={12}
-					md={6}
+					lg={6}
 					align="left"
 					spacing={6}
 				>
@@ -79,7 +77,7 @@ export default function About() {
 					<Grid item container justifyContent="space-between">
 						<Button
 							variant="contained"
-							size="large"
+							sx={{ py: 2, px: {xs:2 , md:4} }}
 							endIcon={<SendIcon />}
 							color="primary"
 						>
@@ -87,11 +85,10 @@ export default function About() {
 						</Button>
 						<Button
 							variant="contained"
-                            component="a"
-                            href={CV}
-                            target="_blank"
-                            
-							size="large"
+							component="a"
+							href={CV}
+							target="_blank"
+							sx={{ py: 2, px: {xs:2 , md:4} }}
 							endIcon={<DownloadIcon />}
 							color="secondary"
 						>

@@ -1,10 +1,8 @@
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
-import Paper from "@mui/material/Paper";
 import Icon from "@mui/material/Icon";
 
 import SectionTitle from "components/SectionTitle";
-import ProjectCard from "components/ProjectCard";
 
 import DesignIcon from "@mui/icons-material/DesignServices";
 import FrontIcon from "assets/images/frontIcon.svg";
