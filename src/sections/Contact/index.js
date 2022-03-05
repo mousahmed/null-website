@@ -115,9 +115,10 @@ export default function Contact() {
 					container
 					direction="column"
 					justifyContent="space-between"
+					
 					spacing={4}
 				>
-					<Grid item>
+					<Grid item sx={{width: "100%" }}>
 						<TextField
 							id="name-form"
 							label="Name"
@@ -133,7 +134,7 @@ export default function Contact() {
 							}
 						/>
 					</Grid>
-					<Grid item>
+					<Grid item sx={{width: "100%" }}>
 						<TextField
 							id="email-form"
 							label="Email"
@@ -150,7 +151,7 @@ export default function Contact() {
 							}
 						/>
 					</Grid>
-					<Grid item>
+					<Grid item sx={{width: "100%" }}>
 						<TextField
 							id="subject-form"
 							label="Subject"
@@ -168,7 +169,7 @@ export default function Contact() {
 							}
 						/>
 					</Grid>
-					<Grid item>
+					<Grid item sx={{width: "100%" }}>
 						<TextField
 							id="message-form"
 							label="Message"
@@ -189,7 +190,7 @@ export default function Contact() {
 							}
 						/>
 					</Grid>
-					<Grid item>
+					<Grid item sx={{width: "100%" }}>
 						<Button
 							variant="contained"
 							color="primary"
@@ -221,15 +222,13 @@ export default function Contact() {
 					container
 					direction="column"
 					justifyContent="center"
-				
 					sx={{
 						background: ` linear-gradient(0deg , rgba(5,5,5,.5) , rgba(5,5,5,.5) ), url(${ContactImage})`,
 						backgroundPosition: "center",
 						backgroundSize: "cover",
 						backgroundRepeat: "no-repeat",
 						minHeight: "40rem",
-						pl: { xs: 2, sm:15 },
-					
+						pl: { xs: 2, sm: 15 },
 					}}
 				>
 					<Grid item sx={{ mb: 4, width: "100%" }}>
