@@ -1,4 +1,3 @@
-import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 
 import SectionTitle from "components/SectionTitle";
@@ -33,10 +32,10 @@ export default function Projects() {
 					<ProjectCard title="Dashboard" />
 				</Grid>
 				<Grid item container direction="column" md={4} xs={12} spacing={4}>
-					<Grid item>
+					<Grid item sx={{ width: "100%" }}>
 						<ProjectCard title="APIs" />
 					</Grid>
-					<Grid item>
+					<Grid item sx={{ width: "100%" }}>
 						<ProjectCard title="IaC" />
 					</Grid>
 				</Grid>

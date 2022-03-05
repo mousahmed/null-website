@@ -111,7 +111,7 @@ export default function Contact() {
 					item
 					xs={12}
 					md={6}
-					sx={{ my: 4, px: { xs: 2, md: 8 } }}
+					sx={{ my: 4, px: { xs: 3, md: 8 } }}
 					container
 					direction="column"
 					justifyContent="space-between"
@@ -221,20 +221,22 @@ export default function Contact() {
 					container
 					direction="column"
 					justifyContent="center"
+				
 					sx={{
 						background: ` linear-gradient(0deg , rgba(5,5,5,.5) , rgba(5,5,5,.5) ), url(${ContactImage})`,
 						backgroundPosition: "center",
 						backgroundSize: "cover",
 						backgroundRepeat: "no-repeat",
 						minHeight: "40rem",
-						pl: { xs: 8, md: 15 },
+						pl: { xs: 2, sm:15 },
+					
 					}}
 				>
 					<Grid item sx={{ mb: 4, width: "100%" }}>
 						<Typography
 							component="a"
 							href="tel:+201000314365"
-							sx={{ textDecoration: "none" }}
+							sx={{ textDecoration: "none", fontSize: "h6.fontSize" }}
 							variant="h5"
 							color="secondary"
 						>
@@ -248,7 +250,7 @@ export default function Contact() {
 						<Typography
 							component="a"
 							href="mailto:info@nullcloudsolutions.com"
-							sx={{ textDecoration: "none", position: "relative" }}
+							sx={{ textDecoration: "none", fontSize: "h6.fontSize" }}
 							variant="h5"
 							color="secondary"
 						>
@@ -265,7 +267,7 @@ export default function Contact() {
 							href="https://www.linkedin.com/in/moustafa-m-ahmed/"
 							target="_blank"
 							rel="noopener noreferrer"
-							sx={{ textDecoration: "none", position: "relative" }}
+							sx={{ textDecoration: "none", fontSize: "h6.fontSize" }}
 							variant="h5"
 							color="secondary"
 						>

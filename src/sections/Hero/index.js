@@ -58,10 +58,20 @@ export default function Hero() {
 							animation: `spin 6s linear infinite`,
 						}}
 					/>
-					<Typography variant="h3" color="primary" gutterBottom>
+					<Typography
+						variant="h3"
+						sx={{ fontSize: { xs: "h4.fontSize" } }}
+						color="primary"
+						gutterBottom
+					>
 						Null Cloud Solutions
 					</Typography>
-					<Typography variant="h4" color="secondary" gutterBottom>
+					<Typography
+						variant="h4"
+						sx={{ fontSize: { xs: "1.6rem" }, mb: { xs: "2rem" } }}
+						color="secondary"
+						gutterBottom
+					>
 						Bring out the best in you
 					</Typography>
 					<Typography
@@ -70,9 +80,9 @@ export default function Hero() {
 						paragraph
 						sx={{ maxWidth: "42rem" }}
 					>
-						Let’s work together in developing your next idea. Bringing it to
-						life and becomes scalable & resiliant on the cloud. Acessible to you
-						and everyone you want in any place, at any time.
+						Let’s work together in developing your next idea. Bringing it to life and
+						becomes scalable & resiliant on the cloud. Acessible to you and everyone
+						you want in any place, at any time.
 					</Typography>
 				</Paper>
 			</Grid>

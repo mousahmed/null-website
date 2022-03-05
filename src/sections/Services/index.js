@@ -36,7 +36,7 @@ export default function Services() {
 					sm={12}
 					md={3}
 				>
-					<AnimationOnScroll animateIn="animate__fadeInLeft" delay={700}>
+					<AnimationOnScroll animateIn="animate__fadeInLeft" delay={200}>
 						<DesignIcon sx={{ fontSize: "4rem" }} color="primary" />
 						<Typography variant="h5" color="secondary" gutterBottom>
 							UI / UX Design
@@ -56,7 +56,7 @@ export default function Services() {
 					sm={12}
 					md={3}
 				>
-					<AnimationOnScroll animateIn="animate__fadeInUp" delay={700}>
+					<AnimationOnScroll animateIn="animate__fadeInUp" delay={200}>
 						<Icon sx={{ fontSize: "4rem" }}>
 							<img
 								src={FrontIcon}
@@ -83,7 +83,7 @@ export default function Services() {
 					sm={12}
 					md={3}
 				>
-					<AnimationOnScroll animateIn="animate__fadeInUp" delay={700}>
+					<AnimationOnScroll animateIn="animate__fadeInUp" delay={200}>
 						<Icon sx={{ fontSize: "4rem" }}>
 							<img
 								style={{ maxWidth: "100%", maxHeight: "100%" }}
@@ -109,7 +109,7 @@ export default function Services() {
 					sm={12}
 					md={3}
 				>
-					<AnimationOnScroll animateIn="animate__fadeInRight" delay={700}>
+					<AnimationOnScroll animateIn="animate__fadeInRight" delay={200}>
 						<Icon sx={{ fontSize: "4rem" }}>
 							<img
 								style={{ maxWidth: "100%", maxHeight: "100%" }}

@@ -1,3 +1,5 @@
+import { Link } from "react-scroll";
+
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
@@ -28,7 +30,7 @@ export default function About() {
 					<Grid
 						component="img"
 						src={AboutImage}
-						sx={{ maxHeight: { xs: "37rem", md: "45rem" } }}
+						sx={{ maxHeight: { xs: "35rem", md: "45rem" } }}
 						alt="Moustafa Mansour"
 					/>
 				</Grid>
@@ -43,10 +45,20 @@ export default function About() {
 					spacing={6}
 				>
 					<Grid item>
-						<Typography variant="h3" sx={{ fontSize: {xs:"2.6rem", sm: "h3.fontSize"} }} color="primary" gutterBottom>
+						<Typography
+							variant="h3"
+							sx={{ fontSize: { xs: "2.5rem", sm: "h3.fontSize" } }}
+							color="primary"
+							gutterBottom
+						>
 							Moustafa Mansour
 						</Typography>
-						<Typography variant="h4" color="secondary" sx={{ fontSize: {xs:"1.8rem", sm: "h4.fontSize"} }} gutterBottom>
+						<Typography
+							variant="h4"
+							color="secondary"
+							sx={{ fontSize: { xs: "1.8rem", sm: "h4.fontSize" } }}
+							gutterBottom
+						>
 							Software Engineer
 						</Typography>
 					</Grid>
@@ -60,35 +72,37 @@ export default function About() {
 							understanding of how everything works.
 						</Typography>
 						<Typography variant="body1" color="#ADA8B6" paragraph>
-							This allows me to make better use of my skills in various aspects
-							of the development process - from planning and designing to
-							testing and coding to deploying and monitoring.
+							This allows me to make better use of my skills in various aspects of the
+							development process - from planning and designing to testing and coding
+							to deploying and monitoring.
 						</Typography>
 						<Typography variant="body1" color="#ADA8B6" paragraph>
 							My main goal is to continue my development and work experience by
 							creating new things and then helping the business succeed.
 						</Typography>
 						<Typography variant="body1" color="#ADA8B6" paragraph>
-							My passion is to create something unique that will not only
-							benefit the company itself but for the user as well.
+							My passion is to create something unique that will not only benefit the
+							company itself but for the user as well.
 						</Typography>
 					</Grid>
 
 					<Grid item container justifyContent="space-between">
-						<Button
-							variant="contained"
-							sx={{ py: 2, px: {xs:2 , md:4} }}
-							endIcon={<SendIcon />}
-							color="primary"
-						>
-							Contact Me
-						</Button>
+						<Link to="contact" smooth>
+							<Button
+								variant="contained"
+								sx={{ py: 2, px: { xs: 2, md: 4 } }}
+								endIcon={<SendIcon />}
+								color="primary"
+							>
+								Contact Me
+							</Button>
+						</Link>
 						<Button
 							variant="contained"
 							component="a"
 							href={CV}
 							target="_blank"
-							sx={{ py: 2, px: {xs:2 , md:4} }}
+							sx={{ py: 2, px: { xs: 2, md: 4 } }}
 							endIcon={<DownloadIcon />}
 							color="secondary"
 						>

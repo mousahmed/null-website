@@ -15,7 +15,6 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import Icon from "@mui/material/Icon";
 
 import Logo from "assets/images/logo.svg";
 
