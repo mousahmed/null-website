@@ -60,7 +60,7 @@ export default function Hero() {
 					/>
 					<Typography
 						variant="h3"
-						sx={{ fontSize: { xs: "h4.fontSize" } }}
+						sx={{ fontSize: { xs: "h4.fontSize", md:"h3.fontSize" } }}
 						color="primary"
 						gutterBottom
 					>
@@ -68,7 +68,7 @@ export default function Hero() {
 					</Typography>
 					<Typography
 						variant="h4"
-						sx={{ fontSize: { xs: "1.6rem" }, mb: { xs: "2rem" } }}
+						sx={{ fontSize: { xs: "1.6rem", md: "h4.fontSize" } , mb: { xs: "2rem" } }}
 						color="secondary"
 						gutterBottom
 					>

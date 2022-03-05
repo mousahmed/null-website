@@ -30,7 +30,7 @@ export default function About() {
 					<Grid
 						component="img"
 						src={AboutImage}
-						sx={{ maxHeight: { xs: "35rem", md: "45rem" } }}
+						sx={{ maxHeight: { xs: "32rem", md: "45rem" } }}
 						alt="Moustafa Mansour"
 					/>
 				</Grid>
@@ -47,7 +47,7 @@ export default function About() {
 					<Grid item>
 						<Typography
 							variant="h3"
-							sx={{ fontSize: { xs: "2.5rem", sm: "h3.fontSize" } }}
+							sx={{ fontSize: { xs: "2.3rem", sm: "h3.fontSize" } }}
 							color="primary"
 							gutterBottom
 						>
