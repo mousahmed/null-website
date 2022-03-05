@@ -191,9 +191,10 @@ export default function Navbar() {
 						<Tab
 							component="a"
 							sx={{ selected: { color: "#fff" } }}
-							key={`navTab-${route.name}-${index}`}
+							onClick={() => scrollTo(route.section)}
+							key={`navDrawer-${route.name}-${index}`}
 							label={route.name}
-							href={route.section}
+							
 						/>
 					))}
 				</Tabs>
