@@ -49,9 +49,6 @@ export default function Navbar() {
 	const [activeTab, setActiveTab] = useState(0);
 	const [open, setOpen] = useState(false);
 
-	const handleChange = (event, newValue) => {
-		setActiveTab(newValue);
-	};
 	const scrollTo = (route) => {
 		scroller.scrollTo(route, {
 			duration: 800,
@@ -121,17 +118,10 @@ export default function Navbar() {
 									<img src={Logo} alt="Null Logo" />
 								</Link>
 							</Grid>
-							<Grid
-								item
-								container
-								alignItems="center"
-								xs
-								justifyContent="flex-end"
-							>
+							<Grid item container alignItems="center" xs justifyContent="flex-end">
 								<Tabs
 									aria-label="nav tabs example"
 									value={activeTab}
-									onChange={handleChange}
 									textColor="secondary"
 									indicatorColor="secondary"
 									sx={{ display: { xs: "none", md: "flex" } }}
@@ -175,7 +165,6 @@ export default function Navbar() {
 				<Tabs
 					aria-label="nav tabs example"
 					value={activeTab}
-					onChange={handleChange}
 					onClick={() => setOpen(false)}
 					textColor="secondary"
 					indicatorColor="secondary"
@@ -194,7 +183,6 @@ export default function Navbar() {
 							onClick={() => scrollTo(route.section)}
 							key={`navDrawer-${route.name}-${index}`}
 							label={route.name}
-							
 						/>
 					))}
 				</Tabs>
